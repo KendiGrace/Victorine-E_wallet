@@ -4,8 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class LogInActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+  lateinit var enter:Button
+  override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_log_in)
+        setContentView(R.layout.activity_main)
+      enter=findViewById(R.id.btnEnter)
+      enter.setOnClickListener {
+    startActivity(Intent(baseContext,LogInActivity::class.java))
+}
+
     }
 }
